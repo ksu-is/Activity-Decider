@@ -1,10 +1,2 @@
 # Activity-Decider
-# PROJECT ROADMAP - ACTIVITY DECIDER
-
-## [SPRINT 1]
-- [X] CONFRIM PROJECT IDEA
-- [X] COMPLETE THE README.MD FILE
-- [X] FORK REPOSITORY IN THE KSU-IS ORGANIZATION
-- [] FIND AT LEAST ONE EXISTING PYTHON CODE RELATED TO THE PROJECT
-
-## [SPRINT 2]
+The Activity Decider is a interactive program that help the user decide what adventure they should do. After answering a series of questions, the user's day will be planned out to their personalized preference based on their answers. 
