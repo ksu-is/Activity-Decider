@@ -42,12 +42,60 @@ while True:
         del outdoors [0]
         break
     else:
-        print('please put a valid answer')
+        print('[PLEASE PUT A VALID ANSWER]')
 
 #indoors = ['Read a book','Workout','Bake or cook something','Karaoke','Throw a Party','Movie Marathon']
 #outdoors = ['Go out for a walk','Go to the movie theater','Go to a spa','Play a sport','Shopping']
 
+while True:
+    question_2 = input("How many people are participating?:\n(A) One\n(B) Two\n(C) Three\n(D) Four or more ")
+    if question_2 == "A":
+        del indoors [-2]
+        del outdoors [-2]
+        break
+    elif question_2 == "B":
+        del indoors [0]
+        del indoors [-2]
+        break
+    elif question_2 == "C":
+        del indoors [0]
+        break
+    elif question_2 == "D":
+        del indoors [0]
+        break
+    else:
+        print('[PLEASE PUT A VALID ANSWER]')
 
+#indoors = ['Read a book','Workout','Bake or cook something','Karaoke','Throw a Party','Movie Marathon']
+#outdoors = ['Go out for a walk','Go to the movie theater','Go to a spa','Play a sport','Shopping']
+
+while True:
+    question_3 = input("What is the budget range?:\n(A) $0(Free)\n(B) $1-$15\n(C) $15-$30\n(D) $30-$50\n(E.) $50+ ")
+    if question_3 == "A":
+        del indoors [-2]
+        del outdoors [1]
+        del outdoors [1]
+        del outdoors [-1]
+        break
+    elif question_3 == "B":
+        del indoors [-2]
+        del outdoors [0]
+        del outdoors [1]
+        break
+    elif question_3 == "C":
+        del indoors [0]
+        del indoors [0]
+        del outdoors [0]
+        break
+    elif question_3 == "D":
+        del indoors [0]
+        del indoors [0]
+        del outdoors [0]
+        break
+    else:
+        print('[PLEASE PUT A VALID ANSWER]')
+
+        
 while True:
     question_4 = input("Do you wish to be indoors or outdoors?:\n(A) Either\n(B) Indoors\n(C) Outdoors ")
     if question_4 == "B":
@@ -59,11 +107,9 @@ while True:
     elif question_4 == "A":
         break
     else:
-        print('please put a valid answer')
+        print('[PLEASE PUT A VALID ANSWER]')
 
 final = indoors + outdoors
 print('Here are the option(s) for you:')
 
 print(final)
-#question_3 = input("How many people are participating?:\n(A) One\n(B) Two\n(C) Three\n(D) Four or more ")
-#question_1 = input("What is the budget range?:\n(A) $0(Free)\n(B) $1-$15\n(C) $15-$30\n(D) $30-$50\n(E.) $50+ ")
