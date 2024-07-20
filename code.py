@@ -1,6 +1,6 @@
 print("----------------------------------------------------------------------------------------------------------------------------")
 print("Welcome to the Activity Decider! This program will suggest a personalized adventure for you based on your answers.")
-print("Please answer the following series of questions to get your result.")
+print("Please answer the following series of questions by using A, B, C, or D to successfully get your result.")
 print("----------------------------------------------------------------------------------------------------------------------------")
 
 questions = ("How many people are participating?: ",
@@ -14,7 +14,7 @@ options = (("A. One", "B. Two", "C. Three", "D. Four or more" ),
            ("A. $0 (Free)", "B. $1-$15", "C. $15-$30", "D. $30-$50"))
 
 indoors = ['Read a book','Workout','Bake or cook something','Karaoke','Throw a Party','Movie Marathon']
-outdoors = ['Go out for a walk','Go to the movie theater','Go to a spa','Play a sport','Shopping']
+outdoors = ['Go out for a walk','Go to the movie theater','Go to a spa','Play a sport','Shopping','Hiking']
 
 q1_elimination_indoors = []
 q1_elimination_outdoors = []
@@ -25,20 +25,19 @@ while True:
         q1_elimination_indoors.append('Movie Marathon')
         q1_elimination_indoors.append('Throw a Party')
         q1_elimination_outdoors.append('Go to the movie theater')
+        q1_elimination_outdoors.append('Hiking')
         break
     elif question_1 == "B":
         q1_elimination_indoors.append('Movie Marathon')
         q1_elimination_indoors.append('Throw a Party')
         break
     elif question_1 == "C":
-        q1_elimination_indoors.append('Read a book')
         q1_elimination_indoors.append('Workout')
         q1_elimination_indoors.append('Bake or cook something')
         q1_elimination_indoors.append('Karaoke')
-        q1_elimination_outdoors.append('Go out on a walk')
+        q1_elimination_outdoors.append('Go out for a walk')
         break
     elif question_1 == "D":
-        q1_elimination_indoors.append('Read a book')
         q1_elimination_indoors.append('Workout')
         q1_elimination_indoors.append('Bake or cook something')
         q1_elimination_indoors.append('Karaoke')
@@ -52,7 +51,7 @@ while True:
         print("----------------------------------------------------------------------------------------------------------------------------")
 
 #indoors = ['Read a book','Workout','Bake or cook something','Karaoke','Throw a Party','Movie Marathon']
-#outdoors = ['Go out for a walk','Go to the movie theater','Go to a spa','Play a sport','Shopping']
+#outdoors = ['Go out for a walk','Go to the movie theater','Go to a spa','Play a sport','Shopping','Hiking']
 
 q2_elimination_indoors = []
 q2_elimination_outdoors = []
@@ -79,7 +78,7 @@ while True:
         print('[PLEASE PUT A VALID ANSWER]')
 
 #indoors = ['Read a book','Workout','Bake or cook something','Karaoke','Throw a Party','Movie Marathon']
-#outdoors = ['Go out for a walk','Go to the movie theater','Go to a spa','Play a sport','Shopping']
+#outdoors = ['Go out for a walk','Go to the movie theater','Go to a spa','Play a sport','Shopping','Hiking']
 
 q3_elimination_indoors = []
 q3_elimination_outdoors = []
@@ -122,7 +121,7 @@ indoors_final = indoors_set - indoors_minus
 outdoors_total_e = (q1_elimination_outdoors + q2_elimination_outdoors + q3_elimination_outdoors)
 outdoors_minus = set(outdoors_total_e)
 outdoors_set = set(outdoors)
-outdoors_final = outdoors_set - indoors_minus
+outdoors_final = outdoors_set - outdoors_minus
 
 either_total_e = (q1_elimination_indoors + q2_elimination_indoors + q3_elimination_indoors + q1_elimination_outdoors + q2_elimination_outdoors + q3_elimination_outdoors)
 either_minus = set(either_total_e)
@@ -131,7 +130,7 @@ either_final = either_set - either_minus
 
 while True:
     print("----------------------------------------------------------------------------------------------------------------------------")
-    question_4 = input("Do you wish to be indoors or outdoors?:\n(A) Either\n(B) Indoors\n(C) Outdoors ")
+    question_4 = input("(Do you wish to be indoors or outdoors?:\n(A) Either\n(B) Indoors\n(C) Outdoors ")
     if question_4 == "B":
         outdoors_final.clear()
         break
@@ -149,7 +148,6 @@ final = indoors_final.union(outdoors_final)
 final_either = either_final
 print("----------------------------------------------------------------------------------------------------------------------------")
 print('Thank you for answering! Here are your option(s):')
-
 if question_4 == "A":
     print(final_either)
 else:
