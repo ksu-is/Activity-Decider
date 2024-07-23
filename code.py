@@ -130,7 +130,7 @@ either_final = either_set - either_minus
 
 while True:
     print("----------------------------------------------------------------------------------------------------------------------------")
-    question_4 = input("(Do you wish to be indoors or outdoors?:\n(A) Either\n(B) Indoors\n(C) Outdoors ")
+    question_4 = input("Do you wish to be indoors or outdoors?:\n(A) Either\n(B) Indoors\n(C) Outdoors ")
     if question_4 == "B":
         outdoors_final.clear()
         break
